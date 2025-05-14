@@ -1,0 +1,29 @@
+# Root-level
+.env
+__pycache__/
+*.py[cod]
+*.sqlite3
+.DS_Store
+*.log
+
+# FastAPI (backend)
+backend/venv/
+backend/__pycache__/
+backend/.env
+backend/.mypy_cache/
+backend/.pytest_cache/
+
+# Node (frontend)
+frontend/node_modules/
+frontend/.env
+frontend/build/
+frontend/dist/
+frontend/.DS_Store
+frontend/yarn.lock
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# OS-specific
+Thumbs.db
