@@ -46,10 +46,11 @@ uvicorn main:app --reload
 
 ### ✅ Frontend (React)
 
+```bash
 cd frontend
 npm install
 npm run dev                 # or npm start if using CRA
-
+```
 
 
 ### 📄 Environment Variables
@@ -57,14 +58,16 @@ npm run dev                 # or npm start if using CRA
 - Make sure to create .env files for both backend/ and frontend/:
 
 #### Backend .env
-
+```ini
 OPENAI_API_KEY=your_key_here
 GOOGLE_CLIENT_ID=your_id
 GOOGLE_CLIENT_SECRET=your_secret
 DB_URL=your_database_url
+```
 
 #### Frontend .env
-
+```ini
 VITE_FIREBASE_API_KEY=...
 VITE_FIREBASE_PROJECT_ID=...
 VITE_BACKEND_URL=http://localhost:8000
+```
