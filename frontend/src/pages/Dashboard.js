@@ -4,7 +4,7 @@ import './Dashboard.css';
 import PastMeetingModal from './PastMeetingModal';
 import UpcomingMeetingModal from './UpcomingMeetingModal';
 
-const BACKEND_URL = "http://localhost:8000";
+const BACKEND_URL = "https://twinmind-backend.onrender.com";
 const GOOGLE_CALENDAR_API = "https://www.googleapis.com/calendar/v3/calendars/primary/events";
 
 function Dashboard() {
