@@ -4,7 +4,7 @@ import { useAudioRecorder } from '../hooks/useAudioRecorder';
 import { useUser } from '../context/UserContext';
 import { renderSummaryHtml } from '../utils/renderSummary';
 
-const API_BASE = "https://twinmind-backend.onrender.com";
+const API_BASE = "https://twinmind-backend-fhyd.onrender.com";
 
 function UpcomingMeetingModal({ meeting, onClose, onJoin }) {
   const [activeTab, setActiveTab] = useState('search');

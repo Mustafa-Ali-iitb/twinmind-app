@@ -15,7 +15,7 @@ MONGO_URL = os.getenv("MONGO_URL")
 OPENAI_API_BASE = "https://api.openai.com/v1"
 WHISPER_MODEL = "whisper-1"
 GPT_MODEL = "gpt-3.5-turbo"
-FRONTEND_URL = "https://twinmind-frontend.onrender.com"
+FRONTEND_URL = "https://twinmind-frontend-di71.onrender.com"
 
 # Initialize FastAPI app
 app = FastAPI()

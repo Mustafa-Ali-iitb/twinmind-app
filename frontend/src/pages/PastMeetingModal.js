@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import './PastMeetingModal.css';
 import { renderSummaryHtml } from '../utils/renderSummary';
 
-const BACKEND_URL = "https://twinmind-backend.onrender.com";
+const BACKEND_URL = "https://twinmind-backend-fhyd.onrender.com";
 function PastMeetingModal({ meeting, onClose, onSaveSearches }) {
   const [activeTab, setActiveTab] = useState('search');
   const [question, setQuestion] = useState('');

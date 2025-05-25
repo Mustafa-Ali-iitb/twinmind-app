@@ -26,7 +26,7 @@ function Login() {
 
       console.log("✅ Google Sign-in Success:", user);
 
-      const response = await fetch("https://twinmind-backend.onrender.com/login", {
+      const response = await fetch("https://twinmind-backend-fhyd.onrender.com/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ token: idToken }),
