@@ -36,23 +36,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-# ---------- Decode creds ------------
-def decode_credentials():
-    b64 = os.getenv("GOOGLE_SERVICE_ACCOUNT_B64")
-    if not b64:
-        print("❌ GOOGLE_SERVICE_ACCOUNT_B64 not set")
-        return
-
-    output_path = "backend/credentials/serviceAccountKey.json"
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-
-    with open(output_path, "wb") as f:
-        f.write(base64.b64decode(b64))
-        print("✅ Decoded serviceAccountKey.json")
-
-decode_credentials()
-
 # ---------- Helper Functions ----------
 
 def transcribe_audio_bytes(audio_bytes: bytes, filename: str, content_type: str) -> str:
