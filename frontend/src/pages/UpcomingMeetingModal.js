@@ -7,7 +7,7 @@ import { renderSummaryHtml } from '../utils/renderSummary';
 const API_BASE = "https://twinmind-backend-fhyd.onrender.com";
 
 function UpcomingMeetingModal({ meeting, onClose, onJoin }) {
-  const [activeTab, setActiveTab] = useState('search');
+  const [activeTab, setActiveTab] = useState('');
   const [transcript, setTranscript] = useState([]);
   const transcriptRef = useRef([]);
   const [searches, setSearches] = useState([]);
