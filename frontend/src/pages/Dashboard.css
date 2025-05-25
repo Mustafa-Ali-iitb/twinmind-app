@@ -1,0 +1,317 @@
+/* Container */
+.dashboard-container {
+    background: linear-gradient(to bottom right, #3c6c8c, #ffe0b2);
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+    background-color: #f9fafb;
+  }
+
+  .logo-img-dashboard {
+    width: 160px;
+  }
+  
+  /* Header Layout */
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  
+  .header-center {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .header-left {
+    flex: 1;
+    text-align: left;
+    font-weight: 600;
+    font-size: 20px;
+    color: #f59e0b;
+  }
+  
+  .header-right {
+    flex: 1;
+    text-align: right;
+    font-weight: 600;
+  }
+  
+  /* User Avatar & Popover */
+  .user-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 200px;
+    z-index: 10;
+  }
+  
+  .dropdown-menu p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .dropdown-menu .dropdown-link {
+    margin-top: 0.5rem;
+    color: #245c7c;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu button {
+    margin-top: 0.5rem;
+    background: linear-gradient(to bottom right, #f59e0b, #f0cf93);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    
+  }
+  
+  .tab-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+  }
+  
+  .tab-btn.active {
+    border-color: #245c7c;
+    color: #245c7c;
+    font-weight: bold;
+  }
+
+  .tabs-with-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .tab-search {
+    max-width: 300px;
+  }
+  
+  
+  /* Meetings */
+  .meeting-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .meeting-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .action-btn {
+    background-color: #245c7c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  
+  /* Footer */
+  .utility-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .utility-btn {
+    background: linear-gradient(to bottom right, #f59e0b, #f0cf93);
+    border: none;
+    padding: 0.8rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .utility-search {
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+  }
+
+  .meeting-date-label {
+    font-weight: 600;
+    color: #f59e0b;
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+  }
+
+  .meeting-card.updated {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .meeting-card.updated:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+  
+  .meeting-info {
+    flex: 1;
+    padding-right: 1rem;
+  }
+  
+  .meeting-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+  }
+  
+  .meeting-summary {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+  
+  .meeting-location {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+  
+  .meeting-time {
+    font-size: 0.85rem;
+    color: #333;
+    margin-top: 0.5rem;
+  }
+  
+  .meeting-action {
+    align-self: center;
+  }
+  
+  .join-btn {
+    background:  linear-gradient(to bottom right, #f59e0b, #fac873);
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .disabled-btn {
+    background-color: #ccc;
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: not-allowed;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .pagination button {
+    background: linear-gradient(to bottom right, #245c7c, #3f7b9e);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 40px;  
+    min-width: 100px;
+    text-align: center;
+  }
+  
+  .pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .modal-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  
+  /* Responsive */
+  @media screen and (min-width: 768px) {
+    .utility-row {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  

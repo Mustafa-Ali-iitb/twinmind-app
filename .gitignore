@@ -27,3 +27,4 @@ frontend/yarn.lock
 
 # OS-specific
 Thumbs.db
+backend/credentials/serviceAccountKey.json
