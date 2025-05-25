@@ -32,7 +32,7 @@ Access the live app here: [https://twinmind-frontend-di71.onrender.com/](https:/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/twinmind-app.git
+git clone https://github.com/Mustafa-Ali-iit/twinmind-app.git
 cd twinmind-app
 ```
 
