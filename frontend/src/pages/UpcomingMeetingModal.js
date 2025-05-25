@@ -56,8 +56,6 @@ function UpcomingMeetingModal({ meeting, onClose, onJoin }) {
     onStop: async () => {
       setIsRecording(false);
       const transcriptText = transcriptRef.current.map(t => t.text).join(" ");
-      setSummary("Generating the summary...");
-      setActiveTab((prevTab) => prevTab !== 'search' ? 'summary' : prevTab);
       try {
         const res = await fetch(`${API_BASE}/generate-structured-summary`, {
           method: "POST",
@@ -70,6 +68,7 @@ function UpcomingMeetingModal({ meeting, onClose, onJoin }) {
         });
         const data = await res.json();
         if (data.summary) {
+          setActiveTab((prevTab) => prevTab !== 'search' ? 'summary' : prevTab);
           setSummary(data.summary);          
         } else {
           console.warn("No summary returned");
