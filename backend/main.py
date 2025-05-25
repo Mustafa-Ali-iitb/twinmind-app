@@ -54,10 +54,19 @@ def transcribe_audio_bytes(audio_bytes: bytes, filename: str, content_type: str)
 
 def get_structured_summary(transcript_text: str) -> dict:
     prompt = (
-        "You are a helpful assistant. Summarize the following meeting transcript. Make sure you use transcript to generate a detailed summary"
-        "The meeting may have multiple participants. Return your output as a JSON object in the format:\n"
-        "{ \"overview\": [\"...\"], \"actionables\": [\"...\"], \"notes\": \"...\" }\n\n"
-        f"Transcript:\n{transcript_text}"
+    "You are a helpful and professional meeting assistant. Based on the transcript provided below, generate a well-structured summary of the meeting. "
+    "The transcript may include multiple participants. Please analyze the full content to extract relevant insights and organize them into the following three sections:\n\n"
+    "1. \"overview\": A list of key discussion points and topics covered during the meeting.\n"
+    "2. \"actionables\": A list of action items or follow-up tasks, specifically directed at the user.\n"
+    "3. \"notes\": A short paragraph with general observations, takeaways, or learning points from the meeting.\n\n"
+    "Return your response strictly in this JSON format:\n"
+    "{\n"
+    "  \"overview\": [\"...\"],\n"
+    "  \"actionables\": [\"...\"],\n"
+    "  \"notes\": \"...\"\n"
+    "}\n\n"
+    "Here is the full meeting transcript:\n"
+    f"{transcript_text}"
     )
     try:
         response = requests.post(
