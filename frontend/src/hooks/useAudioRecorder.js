@@ -79,7 +79,7 @@ export function useAudioRecorder({ onChunk, onStop, onStart }) {
           if (mediaRecorder.state === 'recording') {
             mediaRecorder.stop();
           }
-        }, 10000);
+        }, 30000);
       };
 
       mediaRecorder.start();
