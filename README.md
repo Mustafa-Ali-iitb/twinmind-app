@@ -1,73 +1,91 @@
-# 📝 Real-time Meeting Assistant — FastAPI + React
+# TwinMind 🧠 – Smart Meeting Assistant
 
-This project replicates the functionality of a meeting assistant similar to the iOS app in the TwinMind assignment. It enables users to log in, transcribe meetings in real-time, chat with the transcript, and view structured meeting summaries.
+TwinMind is an intelligent meeting assistant that integrates with your Google Calendar to let you:
 
----
-
-## 🔧 Tech Stack
-
-- **Frontend**: React, Tailwind CSS, Firebase Auth
-- **Backend**: FastAPI, Python, OpenAI/Gemini APIs, MongoDB/PostgreSQL
-- **Others**: Google Calendar API, WebSockets/SSE for streaming
+* View Upcoming and Past Meetings
+* Join and Transcribe Meetings (via mic or screen share)
+* Ask Questions in Real-Time
+* Auto-generate Meeting Summaries and Actionables
+* Save and Search Transcript Conversations
 
 ---
 
-## 📁 Project Structure
+## 🌐 Live Demo
 
-project-root/
-├── backend/ # FastAPI backend
-├── frontend/ # React frontend
-└── README.md
+Access the live app here: [https://twinmind-frontend-di71.onrender.com/](https://twinmind-frontend-di71.onrender.com/)
 
 ---
 
-## 🚀 Features
+## 🧰 Tech Stack
 
-- Google OAuth login (via Firebase or Authlib)
-- Google Calendar integration
-- Real-time audio transcription (OpenAI or Gemini)
-- Chat interface over transcript (streaming responses)
-- Automatic meeting summary generation
-- Persistent storage of transcripts and summaries
+* **Frontend**: React.js + React Context + CSS
+* **Backend**: FastAPI + MongoDB
+* **Auth**: Firebase Google Auth
+* **Transcription & Summary**: OpenAI Whisper & GPT-3.5
+* **Storage**: MongoDB Atlas
+* **Deployment**: [Render](https://render.com/)
 
 ---
 
-## 🛠 Setup Instructions
+## 🚀 Setup Instructions
 
-### ✅ Backend (FastAPI)
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/twinmind-app.git
+cd twinmind-app
+```
+
+---
+
+### 2. Backend Setup
 
 ```bash
 cd backend
-python -m venv venv
-source venv/bin/activate    # on Windows: venv\Scripts\activate
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
+```
+
+Create `.env` file:
+
+```
+MONGO_URL=<your_mongodb_uri>
+OPENAI_API_KEY=<your_openai_key>
+GOOGLE_SERVICE_ACCOUNT_B64=<your_base64_encoded_firebase_key>
+```
+
+Run backend server:
+
+```bash
 uvicorn main:app --reload
 ```
 
-### ✅ Frontend (React)
+---
+
+### 3. Frontend Setup
 
 ```bash
 cd frontend
 npm install
-npm run dev                 # or npm start if using CRA
 ```
 
+Run React app:
 
-### 📄 Environment Variables
-
-- Make sure to create .env files for both backend/ and frontend/:
-
-#### Backend .env
-```ini
-OPENAI_API_KEY=your_key_here
-GOOGLE_CLIENT_ID=your_id
-GOOGLE_CLIENT_SECRET=your_secret
-DB_URL=your_database_url
+```bash
+npm start
 ```
 
-#### Frontend .env
-```ini
-VITE_FIREBASE_API_KEY=...
-VITE_FIREBASE_PROJECT_ID=...
-VITE_BACKEND_URL=http://localhost:8000
-```
+---
+
+## 🔐 Important Notes
+
+* **Google OAuth Warning**: If your app isn't verified by Google, it may show an "Unverified App" screen.
+* **Transcription Cost**: OpenAI Whisper API incurs cost after free credits. Use wisely.
+
+
+---
+
+## 🧑‍💻 Author
+
+Made with ❤️ by [Mustafa Ali](mailto:mustafaali@umass.edu)
